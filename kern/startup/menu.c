@@ -396,6 +396,18 @@ cmd_kheapstats(int nargs, char **args)
 	return 0;
 }
 
+static
+int
+cmd_enabledb(int nargs, char **args)
+{
+        (void)nargs;
+        (void)args;
+
+	dbflags |= 0X0010;
+
+	return 0;
+}
+
 ////////////////////////////////////////
 //
 // Menus.
@@ -426,6 +438,7 @@ showmenu(const char *name, const char *x[])
 }
 
 static const char *opsmenu[] = {
+	"[dth]     Enable debugging	     ",
 	"[s]       Shell                     ",
 	"[p]       Other program             ",
 	"[mount]   Mount a filesystem        ",
@@ -550,6 +563,7 @@ static struct {
 	{ "exit",	cmd_quit },
 	{ "halt",	cmd_quit },
 
+	{ "dth",        cmd_enabledb },  // Assign 0
 #if OPT_SYNCHPROBS
 	/* in-kernel synchronization problem(s) */
 	{ "sp1",	whalemating },

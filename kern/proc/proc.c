@@ -41,7 +41,7 @@
  * Unless you're implementing multithreaded user processes, the only
  * process that will have more than one thread is the kernel process.
  */
-
+#define PROCINFOINLINE
 #include <types.h>
 #include <proc.h>
 #include <current.h>
@@ -50,6 +50,12 @@
 #include <vfs.h>
 #include <synch.h>
 #include <kern/fcntl.h>  
+#include "opt-A2.h"
+#if OPT_A2
+#include <kern/errno.h>
+#include <limits.h>
+#endif
+
 
 /*
  * The process for the kernel; this holds all the kernel-only threads.
@@ -68,7 +74,10 @@ static struct semaphore *proc_count_mutex;
 /* used to signal the kernel menu thread when there are no processes */
 struct semaphore *no_proc_sem;   
 #endif  // UW
-
+#if OPT_A2
+static char proc_ids[PID_MAX];
+static pid_t proc_min_id;
+#endif
 
 
 /*
@@ -91,6 +100,13 @@ proc_create(const char *name)
 	}
 
 	threadarray_init(&proc->p_threads);
+
+#if OPT_A2
+	procinfoarray_init(&proc->p_children);
+	proc->p_parent = NULL;
+	proc->p_id = PID_MIN - 1;
+#endif
+
 	spinlock_init(&proc->p_lock);
 
 	/* VM fields */
@@ -163,6 +179,46 @@ proc_destroy(struct proc *proc)
 	}
 #endif // UW
 
+#if OPT_A2
+	P(proc_count_mutex);
+	struct proc *parent = proc->p_parent;
+	pid_t pid = proc->p_id;
+
+	if (parent != NULL && parent->p_id >= PID_MIN && proc_ids[parent->p_id] == 'u') {
+        	struct procinfo *pinfo;
+        	spinlock_acquire(&parent->p_lock);
+
+        	unsigned num = procinfoarray_num(&parent->p_children);
+        	for (unsigned i = 0; i < num; i++) {
+                	pinfo = procinfoarray_get(&parent->p_children, i);
+                	if (pinfo->pid == pid) break;
+        	}
+        	spinlock_release(&parent->p_lock);
+
+		proc_ids[pid] = 'z';
+		V(pinfo->waitsem);		
+	
+	} else {
+		if (proc_min_id > pid) proc_min_id = pid;
+		proc_ids[pid] = 'c';
+	}
+
+	while (procinfoarray_num(&proc->p_children) > 0) {
+		struct procinfo *tmp = procinfoarray_get(&proc->p_children, 0);
+		sem_destroy(tmp->waitsem);
+		if (proc_ids[tmp->pid] == 'z') {
+			proc_ids[tmp->pid] = 'c';
+			if (proc_min_id > tmp->pid) proc_min_id = tmp->pid;
+		}
+		kfree(tmp);
+		procinfoarray_remove(&proc->p_children, 0);
+	}
+	V(proc_count_mutex);
+	procinfoarray_cleanup(&proc->p_children);
+#endif
+
+
+
 	threadarray_cleanup(&proc->p_threads);
 	spinlock_cleanup(&proc->p_lock);
 
@@ -207,6 +263,17 @@ proc_bootstrap(void)
   if (no_proc_sem == NULL) {
     panic("could not create no_proc_sem semaphore\n");
   }
+
+  
+#if OPT_A2
+  int i = 0;
+  while(i < PID_MAX) {
+    proc_ids[i] = 'c';
+    ++i;
+  }
+  proc_min_id = PID_MIN;
+#endif
+
 #endif // UW 
 }
 
@@ -270,6 +337,18 @@ proc_create_runprogram(const char *name)
 	proc_count++;
 	V(proc_count_mutex);
 #endif // UW
+
+#if OPT_A2
+        proc->p_id = proc_min_id;
+        proc_ids[proc->p_id] = 'u';
+        for (int j = proc_min_id+1; j < PID_MAX; j++) {
+          if (proc_ids[j] == 'c') {
+            proc_min_id = (pid_t)j;
+            break;
+          }
+	}
+
+#endif
 
 	return proc;
 }
@@ -364,3 +443,146 @@ curproc_setas(struct addrspace *newas)
 	spinlock_release(&proc->p_lock);
 	return oldas;
 }
+
+
+#if OPT_A2
+
+int proc_nospace(void) {
+	bool result = false;
+	P(proc_count_mutex);
+
+	if (proc_min_id >= PID_MAX) {
+		result = ENPROC;
+	}
+	V(proc_count_mutex);
+	return result;
+}
+
+int curproc_childcheck(pid_t pid) {
+  int result = 0;
+
+  struct proc *proc = curproc;
+  spinlock_acquire(&proc->p_lock);
+  unsigned num = procinfoarray_num(&proc->p_children);
+  for (unsigned i = 0; i < num; i++) {
+    if (procinfoarray_get(&proc->p_children, i)->pid == pid) {
+      result = 1;
+      break;
+    }
+  }
+  spinlock_release(&proc->p_lock);
+  return result;
+}
+
+
+struct addrspace *proc_setas(struct proc *p, struct addrspace *as) {
+        struct addrspace *tem;
+        spinlock_acquire(&p->p_lock);
+        tem = p->p_addrspace;
+        p->p_addrspace = as;
+        spinlock_release(&p->p_lock);
+        return tem;
+ }
+
+int proc_exist(pid_t pid) {
+  int r = 1;
+  P(proc_count_mutex);
+  if (proc_ids[pid] == 'c') r = 0;
+
+  V(proc_count_mutex);
+
+  return r;
+}
+
+
+int curproc_childexitcode(pid_t pid) {
+        int r;
+        struct proc *proc = curproc;
+        struct procinfo *cpinfo;
+
+        spinlock_acquire(&proc->p_lock);
+        unsigned num = procinfoarray_num(&proc->p_children);
+        for (unsigned i = 0; i < num; i++) {
+                cpinfo = procinfoarray_get(&proc->p_children, i);
+                if (cpinfo->pid == pid) {
+                        break;
+                }
+        }
+        spinlock_release(&proc->p_lock);
+
+        P(cpinfo->waitsem);
+        r = cpinfo->exitcode;
+        return r;
+}
+
+
+void curproc_removechild(pid_t pid) {
+        struct proc *proc = curproc;
+
+        spinlock_acquire(&proc->p_lock);
+        unsigned num = procinfoarray_num(&proc->p_children);
+
+        for (unsigned i = 0; i < num; i++) {
+                if (procinfoarray_get(&proc->p_children, i)->pid == pid) {
+                        procinfoarray_remove(&proc->p_children, i);
+                        break;
+                }
+        }
+        spinlock_release(&proc->p_lock);
+        P(proc_count_mutex);
+        if (proc_ids[pid] == 'z') {
+                proc_ids[pid] = 'c';
+                if (proc_min_id > pid) proc_min_id = pid;
+        }
+        V(proc_count_mutex);
+}
+
+
+void curproc_updateexitcode(int code) {
+        P(proc_count_mutex);
+
+        struct proc *p = curproc;
+        struct proc *proc = p->p_parent;
+        if (proc != NULL && proc->p_id >= PID_MIN && proc_ids[proc->p_id] == 'u') {
+                pid_t pid = p->p_id;
+                spinlock_acquire(&proc->p_lock);
+                unsigned num = procinfoarray_num(&proc->p_children);
+                for (unsigned i = 0; i < num; i++) {
+                        if (procinfoarray_get(&proc->p_children, i)->pid == pid) {
+                                procinfoarray_get(&proc->p_children, i)->exitcode = code;
+                                break;
+                        }
+                }
+                spinlock_release(&proc->p_lock);
+        }
+        V(proc_count_mutex);
+}
+
+int curproc_add(pid_t pid) {
+        int result = 0;
+        struct procinfo *child = kmalloc(sizeof(struct procinfo));
+        if (child == NULL) return(ENOMEM);
+
+        child->pid = pid;
+        child->exitcode = 0;
+        child->waitsem = sem_create("waitsem", 0);
+        if (child->waitsem == NULL) return(ENOMEM);
+
+
+        struct proc *proc = curproc;
+
+        spinlock_acquire(&proc->p_lock);
+        result = procinfoarray_add(&proc->p_children, child, NULL);
+        spinlock_release(&proc->p_lock);
+        return result;
+}
+
+void curproc_changeparent(struct proc *child) {
+        spinlock_acquire(&child->p_lock);
+        child->p_parent = curproc;
+        spinlock_release(&child->p_lock);
+}
+
+#endif
+
+

@@ -44,6 +44,25 @@ struct vnode;
 #ifdef UW
 struct semaphore;
 #endif // UW
+#include "opt-A2.h"
+#if OPT_A2
+#include <array.h>
+#endif
+
+#if OPT_A2
+struct procinfo {
+      pid_t pid;
+      struct semaphore *waitsem;
+      int volatile exitcode;
+};
+
+#ifndef PROCINFOINLINE
+#define PROCINFOINLINE INLINE
+#endif
+DECLARRAY(procinfo);
+DEFARRAY(procinfo, PROCINFOINLINE);
+#endif
+
 
 /*
  * Process structure.
@@ -69,6 +88,15 @@ struct proc {
 #endif
 
 	/* add more material here as needed */
+
+
+#if OPT_A2
+  pid_t p_id;	
+  struct procinfoarray p_children;
+  struct proc *volatile p_parent;
+#endif
+
+
 };
 
 /* This is the process structure for the kernel and for kernel-only threads. */
@@ -100,5 +128,28 @@ struct addrspace *curproc_getas(void);
 /* Change the address space of the current process, and return the old one. */
 struct addrspace *curproc_setas(struct addrspace *);
 
+#if OPT_A2
+int proc_nospace(void);
 
-#endif /* _PROC_H_ */
+int curproc_childcheck(pid_t pid);
+
+struct addrspace *proc_setas(struct proc *p, struct addrspace *as);
+
+int proc_exist(pid_t pid);
+
+int curproc_childexitcode(pid_t pid);
+
+void curproc_removechild(pid_t pid);
+
+void curproc_updateexitcode(int code);
+
+int curproc_add(pid_t pid);
+
+void curproc_changeparent(struct proc *child);
+
+
+
+
+
+#endif
+#endif /* POC_H_ */
