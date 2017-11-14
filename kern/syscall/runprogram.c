@@ -123,7 +123,7 @@ runprogram(char *progname, char ** args, unsigned nargs)
     stackptr -= sizeof(userptr_t);
     stackptr = ROUNDUP(stackptr, sizeof(userptr_t));
 
-    argsize -= sizeof(userptr_t) * (nargs + 1);
+    argsize = sizeof(userptr_t) * (nargs + 1);
     stackptr -= argsize;
     result = copyout(array, (userptr_t)stackptr, argsize);
     if(result) return result;
