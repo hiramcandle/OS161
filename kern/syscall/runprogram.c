@@ -44,6 +44,8 @@
 #include <vfs.h>
 #include <syscall.h>
 #include <test.h>
+#include <copyinout.h>
+#include <limits.h>
 
 /*
  * Load program "progname" and start running it in usermode.
@@ -52,9 +54,11 @@
  * Calls vfs_open on progname and thus may destroy it.
  */
 int
-runprogram(char *progname)
+runprogram(char *progname, char ** args, unsigned nargs)
 {
-	struct addrspace *as;
+
+    struct addrspace *old;
+    struct addrspace *as;
 	struct vnode *v;
 	vaddr_t entrypoint, stackptr;
 	int result;
@@ -66,19 +70,24 @@ runprogram(char *progname)
 	}
 
 	/* We should be a new process. */
-	KASSERT(curproc_getas() == NULL);
+	//KASSERT(curproc_getas() == NULL);
 
-	/* Create a new address space. */
-	as = as_create();
-	if (as ==NULL) {
-		vfs_close(v);
-		return ENOMEM;
-	}
 
-	/* Switch to it and activate it. */
-	curproc_setas(as);
-	as_activate();
+        /* Create a new address space. */
+    as = as_create();
+    if (as == NULL) {
+        vfs_close(v);
+        return ENOMEM;
+    }
 
+    if(curproc_getas() == NULL) {
+        /* Switch to it and activate it. */
+        curproc_setas(as);
+    } else {
+        old = curproc_setas(as);
+    }
+
+    as_activate();
 	/* Load the executable. */
 	result = load_elf(v, &entrypoint);
 	if (result) {
@@ -93,12 +102,36 @@ runprogram(char *progname)
 	/* Define the user stack in the address space */
 	result = as_define_stack(as, &stackptr);
 	if (result) {
-		/* p_addrspace will go away when curproc is destroyed */
-		return result;
-	}
+        /* p_addrspace will go away when curproc is destroyed */
+        return result;
+    }
 
+    int argsize = 0;
+    size_t len;
+    unsigned i = nargs;
+    vaddr_t array[64];
+
+    while(i > 0) {
+        argsize = strlen(args[i-1]) + 1;
+        result = copyoutstr(args[i-1],stackptr-argsize,argsize,&len);
+        if(result) return result;
+        array[i] = stackptr-argsize;
+        stackptr -= argsize;
+        --i;
+    }
+
+    stackptr -= sizeof(userptr_t);
+    stackptr = ROUNDUP(stackptr, sizeof(userptr_t));
+
+    argsize -= sizeof(userptr_t) * (nargs + 1);
+    stackptr -= argsize;
+    result = copyout(array, (userptr_t)stackptr, argsize);
+    if(result) return result;
+
+
+    kfree(old);
 	/* Warp to user mode. */
-	enter_new_process(0 /*argc*/, NULL /*userspace addr of argv*/,
+	enter_new_process(nargs,(userptr_t)stackptr /*userspace addr of argv*/,
 			  stackptr, entrypoint);
 	
 	/* enter_new_process does not return. */

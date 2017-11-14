@@ -16,6 +16,10 @@
 #include <vfs.h>
 #include <kern/fcntl.h>
 #include <mips/trapframe.h>
+#include <copyinout.h>
+#include <limits.h>
+#include <test.h>
+
 #endif
 
   /* this implementation of sys__exit does not do anything with the exit code */
@@ -299,7 +303,39 @@ int sys_fork(struct trapframe *tf, pid_t *retval) {
 
   return(0);
 }
-  
+
+
+int sys_execv(const userptr_t program,userptr_t args) {
+
+    size_t len = 0;
+    char buf[PATH_MAX];
+    char * ptrs[64];
+
+    int readin = 0;
+    int counter = 0;
+    int result;
+
+    result = copyinstr(program, buf, PATH_MAX , &len);
+    if(result) return result;
+    readin += len;
+    ptrs[counter] = buf;
+    counter++;
+
+
+    while(true) {
+        result = copyinstr(args + sizeof(userptr_t) * counter, buf+readin, PATH_MAX - readin, &len);
+        if(result) return result;
+        if(len == 0) break;
+        readin += len;
+        ptrs[counter] = buf+readin;
+        counter++;
+    }
+
+    result = runprogram(buf, ptrs, counter);
+    return result;
+
+
+}
 
 #endif
 

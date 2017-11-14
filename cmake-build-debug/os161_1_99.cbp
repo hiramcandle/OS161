@@ -1,0 +1,1498 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="os161_1_99"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/yuyanghuang/cs350/os161-1.99/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/yuyanghuang/cs350/os161-1.99/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/yuyanghuang/cs350/os161-1.99/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/yuyanghuang/cs350/os161-1.99/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/yuyanghuang/cs350/os161-1.99/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/yuyanghuang/cs350/os161-1.99/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/yuyanghuang/cs350/os161-1.99/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/yuyanghuang/cs350/os161-1.99/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/yuyanghuang/cs350/os161-1.99/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/yuyanghuang/cs350/os161-1.99/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/yuyanghuang/cs350/os161-1.99/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/yuyanghuang/cs350/os161-1.99/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/yuyanghuang/cs350/os161-1.99/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/yuyanghuang/cs350/os161-1.99/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/yuyanghuang/cs350/os161-1.99/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="os161_1_99">
+				<Option output="/Users/yuyanghuang/cs350/os161-1.99/cmake-build-debug/os161_1_99" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/yuyanghuang/cs350/os161-1.99/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DUW=1"/>
+					<Add option="-DOTP_A2=1"/>
+					<Add directory="/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST2"/>
+					<Add directory="/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST2/includelinks"/>
+					<Add directory="/Users/yuyanghuang/cs350/os161-1.99/kern/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/yuyanghuang/cs350/os161-1.99/cmake-build-debug/Makefile&quot;  VERBOSE=1 os161_1_99"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/yuyanghuang/cs350/os161-1.99/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/yuyanghuang/cs350/os161-1.99/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/yuyanghuang/cs350/os161-1.99/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="os161_1_99/fast">
+				<Option output="/Users/yuyanghuang/cs350/os161-1.99/cmake-build-debug/os161_1_99" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/yuyanghuang/cs350/os161-1.99/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DUW=1"/>
+					<Add option="-DOTP_A2=1"/>
+					<Add directory="/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST2"/>
+					<Add directory="/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST2/includelinks"/>
+					<Add directory="/Users/yuyanghuang/cs350/os161-1.99/kern/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/yuyanghuang/cs350/os161-1.99/cmake-build-debug/Makefile&quot;  VERBOSE=1 os161_1_99/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/yuyanghuang/cs350/os161-1.99/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/yuyanghuang/cs350/os161-1.99/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/yuyanghuang/cs350/os161-1.99/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/common/gcc-millicode/adddi3.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/common/gcc-millicode/anddi3.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/common/gcc-millicode/ashldi3.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/common/gcc-millicode/ashrdi3.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/common/gcc-millicode/cmpdi2.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/common/gcc-millicode/divdi3.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/common/gcc-millicode/iordi3.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/common/gcc-millicode/longlong.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/common/gcc-millicode/lshldi3.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/common/gcc-millicode/lshrdi3.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/common/gcc-millicode/moddi3.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/common/gcc-millicode/muldi3.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/common/gcc-millicode/negdi2.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/common/gcc-millicode/notdi2.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/common/gcc-millicode/qdivrem.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/common/gcc-millicode/subdi3.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/common/gcc-millicode/ucmpdi2.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/common/gcc-millicode/udivdi3.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/common/gcc-millicode/umoddi3.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/common/gcc-millicode/xordi3.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/common/libc/printf/__printf.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/common/libc/printf/snprintf.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/common/libc/stdlib/atoi.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/common/libc/string/bzero.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/common/libc/string/memcpy.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/common/libc/string/memmove.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/common/libc/string/strcat.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/common/libc/string/strchr.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/common/libc/string/strcmp.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/common/libc/string/strcpy.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/common/libc/string/strlen.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/common/libc/string/strrchr.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/common/libc/string/strtok_r.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/arch/mips/include/current.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/arch/mips/include/elf.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/arch/mips/include/kern/endian.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/arch/mips/include/kern/regdefs.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/arch/mips/include/kern/setjmp.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/arch/mips/include/kern/signal.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/arch/mips/include/kern/types.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/arch/mips/include/specialreg.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/arch/mips/include/spinlock.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/arch/mips/include/thread.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/arch/mips/include/tlb.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/arch/mips/include/trapframe.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/arch/mips/include/types.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/arch/mips/include/vm.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/arch/mips/locore/trap.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/arch/mips/syscall/syscall.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/arch/mips/thread/cpu.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/arch/mips/thread/switchframe.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/arch/mips/thread/switchframe.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/arch/mips/thread/thread_machdep.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/arch/mips/vm/dumbvm.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/arch/mips/vm/ram.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/arch/sys161/dev/lamebus_machdep.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/arch/sys161/include/bus.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/arch/sys161/include/maxcpus.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST0/autoconf.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST0/autoconf.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST0/includelinks/machine/kern/endian.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST0/includelinks/machine/kern/regdefs.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST0/includelinks/machine/kern/setjmp.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST0/includelinks/machine/kern/signal.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST0/includelinks/machine/kern/types.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST0/includelinks/mips/kern/endian.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST0/includelinks/mips/kern/regdefs.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST0/includelinks/mips/kern/setjmp.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST0/includelinks/mips/kern/signal.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST0/includelinks/mips/kern/types.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST0/opt-A0.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST0/opt-A1.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST0/opt-A2.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST0/opt-A3.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST0/opt-A4.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST0/opt-A5.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST0/opt-dumbvm.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST0/opt-net.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST0/opt-netfs.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST0/opt-noasserts.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST0/opt-sfs.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST0/opt-synchprobs.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST0/vers.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST1/autoconf.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST1/autoconf.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST1/includelinks/machine/kern/endian.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST1/includelinks/machine/kern/regdefs.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST1/includelinks/machine/kern/setjmp.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST1/includelinks/machine/kern/signal.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST1/includelinks/machine/kern/types.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST1/includelinks/mips/kern/endian.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST1/includelinks/mips/kern/regdefs.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST1/includelinks/mips/kern/setjmp.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST1/includelinks/mips/kern/signal.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST1/includelinks/mips/kern/types.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST1/opt-A0.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST1/opt-A1.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST1/opt-A2.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST1/opt-A3.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST1/opt-A4.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST1/opt-A5.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST1/opt-dumbvm.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST1/opt-net.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST1/opt-netfs.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST1/opt-noasserts.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST1/opt-sfs.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST1/opt-synchprobs.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST1/vers.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST2/autoconf.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST2/autoconf.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST2/includelinks/machine/kern/endian.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST2/includelinks/machine/kern/regdefs.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST2/includelinks/machine/kern/setjmp.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST2/includelinks/machine/kern/signal.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST2/includelinks/machine/kern/types.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST2/includelinks/mips/kern/endian.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST2/includelinks/mips/kern/regdefs.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST2/includelinks/mips/kern/setjmp.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST2/includelinks/mips/kern/signal.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST2/includelinks/mips/kern/types.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST2/opt-A0.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST2/opt-A1.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST2/opt-A2.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST2/opt-A3.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST2/opt-A4.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST2/opt-A5.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST2/opt-dumbvm.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST2/opt-net.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST2/opt-netfs.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST2/opt-noasserts.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST2/opt-sfs.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST2/opt-synchprobs.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST2/vers.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/dev/generic/beep.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/dev/generic/beep.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/dev/generic/console.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/dev/generic/console.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/dev/generic/random.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/dev/generic/random.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/dev/generic/rtclock.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/dev/generic/rtclock.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/dev/lamebus/beep_ltimer.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/dev/lamebus/con_lscreen.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/dev/lamebus/con_lser.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/dev/lamebus/emu.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/dev/lamebus/emu.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/dev/lamebus/emu_att.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/dev/lamebus/lamebus.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/dev/lamebus/lamebus.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/dev/lamebus/lhd.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/dev/lamebus/lhd.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/dev/lamebus/lhd_att.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/dev/lamebus/lnet.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/dev/lamebus/lnet_att.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/dev/lamebus/lrandom.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/dev/lamebus/lrandom.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/dev/lamebus/lrandom_att.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/dev/lamebus/lscreen.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/dev/lamebus/lscreen.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/dev/lamebus/lscreen_att.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/dev/lamebus/lser.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/dev/lamebus/lser.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/dev/lamebus/lser_att.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/dev/lamebus/ltimer.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/dev/lamebus/ltimer.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/dev/lamebus/ltimer_att.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/dev/lamebus/ltrace.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/dev/lamebus/ltrace.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/dev/lamebus/ltrace_att.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/dev/lamebus/random_lrandom.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/dev/lamebus/rtclock_ltimer.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/fs/sfs/sfs_fs.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/fs/sfs/sfs_io.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/fs/sfs/sfs_vnode.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/include/addrspace.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/include/array.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/include/bitmap.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/include/cdefs.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/include/clock.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/include/copyinout.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/include/cpu.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/include/current.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/include/device.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/include/elf.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/include/emufs.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/include/endian.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/include/fs.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/include/kern/endian.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/include/kern/errmsg.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/include/kern/errno.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/include/kern/fcntl.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/include/kern/ioctl.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/include/kern/iovec.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/include/kern/limits.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/include/kern/reboot.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/include/kern/resource.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/include/kern/seek.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/include/kern/sfs.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/include/kern/signal.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/include/kern/socket.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/include/kern/stat.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/include/kern/stattypes.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/include/kern/syscall.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/include/kern/time.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/include/kern/types.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/include/kern/unistd.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/include/kern/wait.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/include/lib.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/include/limits.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/include/mainbus.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/include/proc.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/include/queue.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/include/setjmp.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/include/sfs.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/include/signal.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/include/spinlock.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/include/spl.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/include/stat.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/include/stdarg.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/include/synch.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/include/synchprobs.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/include/syscall.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/include/test.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/include/thread.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/include/threadlist.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/include/threadprivate.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/include/types.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/include/uio.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/include/uw-vmstats.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/include/version.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/include/vfs.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/include/vm.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/include/vnode.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/include/wchan.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/lib/array.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/lib/bitmap.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/lib/bswap.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/lib/kgets.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/lib/kprintf.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/lib/misc.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/lib/queue.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/lib/uio.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/proc/proc.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/startup/main.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/startup/menu.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/synchprobs/catmouse.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/synchprobs/catmouse_synch.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/synchprobs/traffic.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/synchprobs/traffic_synch.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/synchprobs/whalemating.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/syscall/file_syscalls.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/syscall/loadelf.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/syscall/proc_syscalls.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/syscall/runprogram.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/syscall/time_syscalls.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/test/arraytest.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/test/bitmaptest.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/test/fstest.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/test/malloctest.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/test/nettest.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/test/synchtest.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/test/threadtest.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/test/tt3.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/test/uw-tests.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/thread/clock.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/thread/spinlock.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/thread/spl.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/thread/synch.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/thread/thread.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/thread/threadlist.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/vfs/device.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/vfs/devnull.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/vfs/vfscwd.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/vfs/vfslist.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/vfs/vfslookup.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/vfs/vfspath.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/vfs/vnode.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/vm/copyinout.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/vm/kmalloc.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/kern/vm/uw-vmstats.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/bin/cat/cat.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/bin/cp/cp.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/bin/false/false.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/bin/ln/ln.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/bin/ls/ls.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/bin/mkdir/mkdir.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/bin/mv/mv.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/bin/pwd/pwd.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/bin/rm/rm.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/bin/rmdir/rmdir.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/bin/sh/sh.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/bin/sync/sync.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/bin/true/true.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/include/assert.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/include/err.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/include/errno.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/include/fcntl.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/include/limits.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/include/setjmp.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/include/signal.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/include/stdarg.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/include/stdint.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/include/stdio.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/include/stdlib.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/include/string.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/include/sys/endian.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/include/sys/ioctl.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/include/sys/null.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/include/sys/reboot.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/include/sys/stat.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/include/sys/types.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/include/sys/wait.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/include/time.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/include/types/size_t.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/include/unistd.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/lib/hostcompat/err.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/lib/hostcompat/host-err.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/lib/hostcompat/hostcompat.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/lib/hostcompat/hostcompat.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/lib/hostcompat/time.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/lib/libc/stdio/__puts.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/lib/libc/stdio/getchar.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/lib/libc/stdio/printf.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/lib/libc/stdio/putchar.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/lib/libc/stdio/puts.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/lib/libc/stdlib/abort.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/lib/libc/stdlib/exit.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/lib/libc/stdlib/malloc.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/lib/libc/stdlib/random.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/lib/libc/stdlib/system.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/lib/libc/string/memcmp.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/lib/libc/string/memset.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/lib/libc/string/strerror.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/lib/libc/string/strtok.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/lib/libc/time/time.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/lib/libc/unix/__assert.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/lib/libc/unix/err.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/lib/libc/unix/errno.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/lib/libc/unix/getcwd.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/my-testbin/example/example.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/sbin/dumpsfs/dumpsfs.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/sbin/halt/halt.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/sbin/mksfs/disk.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/sbin/mksfs/disk.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/sbin/mksfs/mksfs.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/sbin/mksfs/support.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/sbin/mksfs/support.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/sbin/poweroff/poweroff.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/sbin/reboot/reboot.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/sbin/sfsck/sfsck.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/testbin/add/add.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/testbin/argtest/argtest.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/testbin/badcall/bad_chdir.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/testbin/badcall/bad_close.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/testbin/badcall/bad_dup2.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/testbin/badcall/bad_execv.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/testbin/badcall/bad_fsync.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/testbin/badcall/bad_ftruncate.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/testbin/badcall/bad_getcwd.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/testbin/badcall/bad_getdirentry.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/testbin/badcall/bad_ioctl.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/testbin/badcall/bad_link.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/testbin/badcall/bad_lseek.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/testbin/badcall/bad_mkdir.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/testbin/badcall/bad_open.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/testbin/badcall/bad_pipe.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/testbin/badcall/bad_read.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/testbin/badcall/bad_readlink.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/testbin/badcall/bad_reboot.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/testbin/badcall/bad_remove.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/testbin/badcall/bad_rename.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/testbin/badcall/bad_rmdir.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/testbin/badcall/bad_sbrk.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/testbin/badcall/bad_stat.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/testbin/badcall/bad_symlink.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/testbin/badcall/bad_time.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/testbin/badcall/bad_waitpid.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/testbin/badcall/bad_write.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/testbin/badcall/common_buf.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/testbin/badcall/common_fds.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/testbin/badcall/common_path.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/testbin/badcall/config.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/testbin/badcall/driver.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/testbin/badcall/test.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/testbin/bigfile/bigfile.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/testbin/conman/conman.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/testbin/crash/crash.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/testbin/ctest/ctest.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/testbin/dirconc/dirconc.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/testbin/dirseek/dirseek.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/testbin/dirtest/dirtest.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/testbin/f_test/f_hdr.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/testbin/f_test/f_read.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/testbin/f_test/f_test.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/testbin/f_test/f_write.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/testbin/farm/farm.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/testbin/faulter/faulter.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/testbin/filetest/filetest.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/testbin/forkbomb/forkbomb.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/testbin/forktest/forktest.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/testbin/guzzle/guzzle.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/testbin/hash/hash.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/testbin/hog/hog.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/testbin/huge/huge.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/testbin/kitchen/kitchen.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/testbin/malloctest/malloctest.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/testbin/matmult/matmult-orig.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/testbin/matmult/matmult.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/testbin/palin/palin.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/testbin/parallelvm/parallelvm.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/testbin/psort/psort.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/testbin/randcall/calls.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/testbin/randcall/extern.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/testbin/randcall/main.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/testbin/rmdirtest/rmdirtest.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/testbin/rmtest/rmtest.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/testbin/sink/sink.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/testbin/sort/sort.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/testbin/sty/sty.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/testbin/tail/tail.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/testbin/tictac/tictac.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/testbin/triplehuge/triple.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/testbin/triplehuge/triple.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/testbin/triplehuge/triplehuge.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/testbin/triplemat/triple.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/testbin/triplemat/triple.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/testbin/triplemat/triplemat.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/testbin/triplesort/triple.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/testbin/triplesort/triple.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/testbin/triplesort/triplesort.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/testbin/userthreads/userthreads.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/testbin/zero/zero.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/uw-testbin/argtest/argtest.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/uw-testbin/argtesttest/argtesttest.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/uw-testbin/conc-io/conc-io.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/uw-testbin/exec-sparse/exec-sparse.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/uw-testbin/files1/files1.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/uw-testbin/files2/files2.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/uw-testbin/hogparty/hogparty.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/uw-testbin/lib/testutils.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/uw-testbin/lib/testutils.h">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/uw-testbin/onefork/onefork.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/uw-testbin/pidcheck/pidcheck.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/uw-testbin/romemwrite/romemwrite.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/uw-testbin/segments/segments.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/uw-testbin/sparse/sparse.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/uw-testbin/syscall/syscall.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/uw-testbin/tlbfaulter/tlbfaulter.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/uw-testbin/vm-crash1/vm-crash1.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/uw-testbin/vm-crash2/vm-crash2.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/uw-testbin/vm-crash3/vm-crash3.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/uw-testbin/vm-data1/vm-data1.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/uw-testbin/vm-data2/vm-data2.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/uw-testbin/vm-data3/vm-data3.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/uw-testbin/vm-funcs/vm-funcs.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/uw-testbin/vm-mix1-exec/vm-mix1-exec.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/uw-testbin/vm-mix1-fork/vm-mix1-fork.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/uw-testbin/vm-mix1/vm-mix1.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/uw-testbin/vm-mix2/vm-mix2.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/uw-testbin/vm-stack1/vm-stack1.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/uw-testbin/vm-stack2/vm-stack2.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/uw-testbin/vm-stackgrow/vm-stackgrow.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/uw-testbin/widefork/widefork.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/uw-testbin/writeread/writeread.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/uw-testbin/xhog/xhog.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/uw-testbin/yhog/yhog.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/user/uw-testbin/zhog/zhog.c">
+			<Option target="os161_1_99"/>
+		</Unit>
+		<Unit filename="/Users/yuyanghuang/cs350/os161-1.99/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

@@ -1,0 +1,3 @@
+/Users/yuyanghuang/cs350/os161-1.99/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/yuyanghuang/cs350/os161-1.99/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/yuyanghuang/cs350/os161-1.99/cmake-build-debug/CMakeFiles/os161_1_99.dir
