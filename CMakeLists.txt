@@ -112,31 +112,31 @@ set(SOURCE_FILES
         kern/compile/ASST1/opt-sfs.h
         kern/compile/ASST1/opt-synchprobs.h
         kern/compile/ASST1/vers.c
-        kern/compile/ASST2/includelinks/machine/kern/endian.h
-        kern/compile/ASST2/includelinks/machine/kern/regdefs.h
-        kern/compile/ASST2/includelinks/machine/kern/setjmp.h
-        kern/compile/ASST2/includelinks/machine/kern/signal.h
-        kern/compile/ASST2/includelinks/machine/kern/types.h
-        kern/compile/ASST2/includelinks/mips/kern/endian.h
-        kern/compile/ASST2/includelinks/mips/kern/regdefs.h
-        kern/compile/ASST2/includelinks/mips/kern/setjmp.h
-        kern/compile/ASST2/includelinks/mips/kern/signal.h
-        kern/compile/ASST2/includelinks/mips/kern/types.h
-        kern/compile/ASST2/autoconf.c
-        kern/compile/ASST2/autoconf.h
-        kern/compile/ASST2/opt-A0.h
-        kern/compile/ASST2/opt-A1.h
-        kern/compile/ASST2/opt-A2.h
-        kern/compile/ASST2/opt-A3.h
-        kern/compile/ASST2/opt-A4.h
-        kern/compile/ASST2/opt-A5.h
-        kern/compile/ASST2/opt-dumbvm.h
-        kern/compile/ASST2/opt-net.h
-        kern/compile/ASST2/opt-netfs.h
-        kern/compile/ASST2/opt-noasserts.h
-        kern/compile/ASST2/opt-sfs.h
-        kern/compile/ASST2/opt-synchprobs.h
-        kern/compile/ASST2/vers.c
+        kern/compile/ASST3/includelinks/machine/kern/endian.h
+        kern/compile/ASST3/includelinks/machine/kern/regdefs.h
+        kern/compile/ASST3/includelinks/machine/kern/setjmp.h
+        kern/compile/ASST3/includelinks/machine/kern/signal.h
+        kern/compile/ASST3/includelinks/machine/kern/types.h
+        kern/compile/ASST3/includelinks/mips/kern/endian.h
+        kern/compile/ASST3/includelinks/mips/kern/regdefs.h
+        kern/compile/ASST3/includelinks/mips/kern/setjmp.h
+        kern/compile/ASST3/includelinks/mips/kern/signal.h
+        kern/compile/ASST3/includelinks/mips/kern/types.h
+        kern/compile/ASST3/autoconf.c
+        kern/compile/ASST3/autoconf.h
+        kern/compile/ASST3/opt-A0.h
+        kern/compile/ASST3/opt-A1.h
+        kern/compile/ASST3/opt-A2.h
+        kern/compile/ASST3/opt-A3.h
+        kern/compile/ASST3/opt-A4.h
+        kern/compile/ASST3/opt-A5.h
+        kern/compile/ASST3/opt-dumbvm.h
+        kern/compile/ASST3/opt-net.h
+        kern/compile/ASST3/opt-netfs.h
+        kern/compile/ASST3/opt-noasserts.h
+        kern/compile/ASST3/opt-sfs.h
+        kern/compile/ASST3/opt-synchprobs.h
+        kern/compile/ASST3/vers.c
         kern/dev/generic/beep.c
         kern/dev/generic/beep.h
         kern/dev/generic/console.c
@@ -472,8 +472,8 @@ set(SOURCE_FILES
         user/uw-testbin/yhog/yhog.c
         user/uw-testbin/zhog/zhog.c)
 
-include_directories(kern/compile/ASST2)
-include_directories(kern/compile/ASST2/includelinks)
+include_directories(kern/compile/ASST3)
+include_directories(kern/compile/ASST3/includelinks)
 include_directories(kern/include)
 add_definitions(-DUW=1)
 add_definitions(-DOTP_A2=1)

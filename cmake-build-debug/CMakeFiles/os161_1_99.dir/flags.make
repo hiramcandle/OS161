@@ -6,5 +6,5 @@ C_FLAGS = -g
 
 C_DEFINES = -DOTP_A2=1 -DUW=1
 
-C_INCLUDES = -I/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST2 -I/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST2/includelinks -I/Users/yuyanghuang/cs350/os161-1.99/kern/include 
+C_INCLUDES = -I/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST3 -I/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST3/includelinks -I/Users/yuyanghuang/cs350/os161-1.99/kern/include 
 

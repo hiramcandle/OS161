@@ -1113,52 +1113,52 @@ CMakeFiles/os161_1_99.dir/kern/compile/ASST1/vers.c.o.provides: CMakeFiles/os161
 CMakeFiles/os161_1_99.dir/kern/compile/ASST1/vers.c.o.provides.build: CMakeFiles/os161_1_99.dir/kern/compile/ASST1/vers.c.o
 
 
-CMakeFiles/os161_1_99.dir/kern/compile/ASST2/autoconf.c.o: CMakeFiles/os161_1_99.dir/flags.make
-CMakeFiles/os161_1_99.dir/kern/compile/ASST2/autoconf.c.o: ../kern/compile/ASST2/autoconf.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/yuyanghuang/cs350/os161-1.99/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building C object CMakeFiles/os161_1_99.dir/kern/compile/ASST2/autoconf.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/os161_1_99.dir/kern/compile/ASST2/autoconf.c.o   -c /Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST2/autoconf.c
+CMakeFiles/os161_1_99.dir/kern/compile/ASST3/autoconf.c.o: CMakeFiles/os161_1_99.dir/flags.make
+CMakeFiles/os161_1_99.dir/kern/compile/ASST3/autoconf.c.o: ../kern/compile/ASST3/autoconf.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/yuyanghuang/cs350/os161-1.99/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building C object CMakeFiles/os161_1_99.dir/kern/compile/ASST3/autoconf.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/os161_1_99.dir/kern/compile/ASST3/autoconf.c.o   -c /Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST3/autoconf.c
 
-CMakeFiles/os161_1_99.dir/kern/compile/ASST2/autoconf.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/os161_1_99.dir/kern/compile/ASST2/autoconf.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST2/autoconf.c > CMakeFiles/os161_1_99.dir/kern/compile/ASST2/autoconf.c.i
+CMakeFiles/os161_1_99.dir/kern/compile/ASST3/autoconf.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/os161_1_99.dir/kern/compile/ASST3/autoconf.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST3/autoconf.c > CMakeFiles/os161_1_99.dir/kern/compile/ASST3/autoconf.c.i
 
-CMakeFiles/os161_1_99.dir/kern/compile/ASST2/autoconf.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/os161_1_99.dir/kern/compile/ASST2/autoconf.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST2/autoconf.c -o CMakeFiles/os161_1_99.dir/kern/compile/ASST2/autoconf.c.s
+CMakeFiles/os161_1_99.dir/kern/compile/ASST3/autoconf.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/os161_1_99.dir/kern/compile/ASST3/autoconf.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST3/autoconf.c -o CMakeFiles/os161_1_99.dir/kern/compile/ASST3/autoconf.c.s
 
-CMakeFiles/os161_1_99.dir/kern/compile/ASST2/autoconf.c.o.requires:
+CMakeFiles/os161_1_99.dir/kern/compile/ASST3/autoconf.c.o.requires:
 
-.PHONY : CMakeFiles/os161_1_99.dir/kern/compile/ASST2/autoconf.c.o.requires
+.PHONY : CMakeFiles/os161_1_99.dir/kern/compile/ASST3/autoconf.c.o.requires
 
-CMakeFiles/os161_1_99.dir/kern/compile/ASST2/autoconf.c.o.provides: CMakeFiles/os161_1_99.dir/kern/compile/ASST2/autoconf.c.o.requires
-	$(MAKE) -f CMakeFiles/os161_1_99.dir/build.make CMakeFiles/os161_1_99.dir/kern/compile/ASST2/autoconf.c.o.provides.build
-.PHONY : CMakeFiles/os161_1_99.dir/kern/compile/ASST2/autoconf.c.o.provides
+CMakeFiles/os161_1_99.dir/kern/compile/ASST3/autoconf.c.o.provides: CMakeFiles/os161_1_99.dir/kern/compile/ASST3/autoconf.c.o.requires
+	$(MAKE) -f CMakeFiles/os161_1_99.dir/build.make CMakeFiles/os161_1_99.dir/kern/compile/ASST3/autoconf.c.o.provides.build
+.PHONY : CMakeFiles/os161_1_99.dir/kern/compile/ASST3/autoconf.c.o.provides
 
-CMakeFiles/os161_1_99.dir/kern/compile/ASST2/autoconf.c.o.provides.build: CMakeFiles/os161_1_99.dir/kern/compile/ASST2/autoconf.c.o
+CMakeFiles/os161_1_99.dir/kern/compile/ASST3/autoconf.c.o.provides.build: CMakeFiles/os161_1_99.dir/kern/compile/ASST3/autoconf.c.o
 
 
-CMakeFiles/os161_1_99.dir/kern/compile/ASST2/vers.c.o: CMakeFiles/os161_1_99.dir/flags.make
-CMakeFiles/os161_1_99.dir/kern/compile/ASST2/vers.c.o: ../kern/compile/ASST2/vers.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/yuyanghuang/cs350/os161-1.99/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building C object CMakeFiles/os161_1_99.dir/kern/compile/ASST2/vers.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/os161_1_99.dir/kern/compile/ASST2/vers.c.o   -c /Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST2/vers.c
+CMakeFiles/os161_1_99.dir/kern/compile/ASST3/vers.c.o: CMakeFiles/os161_1_99.dir/flags.make
+CMakeFiles/os161_1_99.dir/kern/compile/ASST3/vers.c.o: ../kern/compile/ASST3/vers.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/yuyanghuang/cs350/os161-1.99/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building C object CMakeFiles/os161_1_99.dir/kern/compile/ASST3/vers.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/os161_1_99.dir/kern/compile/ASST3/vers.c.o   -c /Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST3/vers.c
 
-CMakeFiles/os161_1_99.dir/kern/compile/ASST2/vers.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/os161_1_99.dir/kern/compile/ASST2/vers.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST2/vers.c > CMakeFiles/os161_1_99.dir/kern/compile/ASST2/vers.c.i
+CMakeFiles/os161_1_99.dir/kern/compile/ASST3/vers.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/os161_1_99.dir/kern/compile/ASST3/vers.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST3/vers.c > CMakeFiles/os161_1_99.dir/kern/compile/ASST3/vers.c.i
 
-CMakeFiles/os161_1_99.dir/kern/compile/ASST2/vers.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/os161_1_99.dir/kern/compile/ASST2/vers.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST2/vers.c -o CMakeFiles/os161_1_99.dir/kern/compile/ASST2/vers.c.s
+CMakeFiles/os161_1_99.dir/kern/compile/ASST3/vers.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/os161_1_99.dir/kern/compile/ASST3/vers.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST3/vers.c -o CMakeFiles/os161_1_99.dir/kern/compile/ASST3/vers.c.s
 
-CMakeFiles/os161_1_99.dir/kern/compile/ASST2/vers.c.o.requires:
+CMakeFiles/os161_1_99.dir/kern/compile/ASST3/vers.c.o.requires:
 
-.PHONY : CMakeFiles/os161_1_99.dir/kern/compile/ASST2/vers.c.o.requires
+.PHONY : CMakeFiles/os161_1_99.dir/kern/compile/ASST3/vers.c.o.requires
 
-CMakeFiles/os161_1_99.dir/kern/compile/ASST2/vers.c.o.provides: CMakeFiles/os161_1_99.dir/kern/compile/ASST2/vers.c.o.requires
-	$(MAKE) -f CMakeFiles/os161_1_99.dir/build.make CMakeFiles/os161_1_99.dir/kern/compile/ASST2/vers.c.o.provides.build
-.PHONY : CMakeFiles/os161_1_99.dir/kern/compile/ASST2/vers.c.o.provides
+CMakeFiles/os161_1_99.dir/kern/compile/ASST3/vers.c.o.provides: CMakeFiles/os161_1_99.dir/kern/compile/ASST3/vers.c.o.requires
+	$(MAKE) -f CMakeFiles/os161_1_99.dir/build.make CMakeFiles/os161_1_99.dir/kern/compile/ASST3/vers.c.o.provides.build
+.PHONY : CMakeFiles/os161_1_99.dir/kern/compile/ASST3/vers.c.o.provides
 
-CMakeFiles/os161_1_99.dir/kern/compile/ASST2/vers.c.o.provides.build: CMakeFiles/os161_1_99.dir/kern/compile/ASST2/vers.c.o
+CMakeFiles/os161_1_99.dir/kern/compile/ASST3/vers.c.o.provides.build: CMakeFiles/os161_1_99.dir/kern/compile/ASST3/vers.c.o
 
 
 CMakeFiles/os161_1_99.dir/kern/dev/generic/beep.c.o: CMakeFiles/os161_1_99.dir/flags.make
@@ -6679,8 +6679,8 @@ os161_1_99_OBJECTS = \
 "CMakeFiles/os161_1_99.dir/kern/compile/ASST0/vers.c.o" \
 "CMakeFiles/os161_1_99.dir/kern/compile/ASST1/autoconf.c.o" \
 "CMakeFiles/os161_1_99.dir/kern/compile/ASST1/vers.c.o" \
-"CMakeFiles/os161_1_99.dir/kern/compile/ASST2/autoconf.c.o" \
-"CMakeFiles/os161_1_99.dir/kern/compile/ASST2/vers.c.o" \
+"CMakeFiles/os161_1_99.dir/kern/compile/ASST3/autoconf.c.o" \
+"CMakeFiles/os161_1_99.dir/kern/compile/ASST3/vers.c.o" \
 "CMakeFiles/os161_1_99.dir/kern/dev/generic/beep.c.o" \
 "CMakeFiles/os161_1_99.dir/kern/dev/generic/console.c.o" \
 "CMakeFiles/os161_1_99.dir/kern/dev/generic/random.c.o" \
@@ -6957,8 +6957,8 @@ os161_1_99: CMakeFiles/os161_1_99.dir/kern/compile/ASST0/autoconf.c.o
 os161_1_99: CMakeFiles/os161_1_99.dir/kern/compile/ASST0/vers.c.o
 os161_1_99: CMakeFiles/os161_1_99.dir/kern/compile/ASST1/autoconf.c.o
 os161_1_99: CMakeFiles/os161_1_99.dir/kern/compile/ASST1/vers.c.o
-os161_1_99: CMakeFiles/os161_1_99.dir/kern/compile/ASST2/autoconf.c.o
-os161_1_99: CMakeFiles/os161_1_99.dir/kern/compile/ASST2/vers.c.o
+os161_1_99: CMakeFiles/os161_1_99.dir/kern/compile/ASST3/autoconf.c.o
+os161_1_99: CMakeFiles/os161_1_99.dir/kern/compile/ASST3/vers.c.o
 os161_1_99: CMakeFiles/os161_1_99.dir/kern/dev/generic/beep.c.o
 os161_1_99: CMakeFiles/os161_1_99.dir/kern/dev/generic/console.c.o
 os161_1_99: CMakeFiles/os161_1_99.dir/kern/dev/generic/random.c.o
@@ -7241,8 +7241,8 @@ CMakeFiles/os161_1_99.dir/requires: CMakeFiles/os161_1_99.dir/kern/compile/ASST0
 CMakeFiles/os161_1_99.dir/requires: CMakeFiles/os161_1_99.dir/kern/compile/ASST0/vers.c.o.requires
 CMakeFiles/os161_1_99.dir/requires: CMakeFiles/os161_1_99.dir/kern/compile/ASST1/autoconf.c.o.requires
 CMakeFiles/os161_1_99.dir/requires: CMakeFiles/os161_1_99.dir/kern/compile/ASST1/vers.c.o.requires
-CMakeFiles/os161_1_99.dir/requires: CMakeFiles/os161_1_99.dir/kern/compile/ASST2/autoconf.c.o.requires
-CMakeFiles/os161_1_99.dir/requires: CMakeFiles/os161_1_99.dir/kern/compile/ASST2/vers.c.o.requires
+CMakeFiles/os161_1_99.dir/requires: CMakeFiles/os161_1_99.dir/kern/compile/ASST3/autoconf.c.o.requires
+CMakeFiles/os161_1_99.dir/requires: CMakeFiles/os161_1_99.dir/kern/compile/ASST3/vers.c.o.requires
 CMakeFiles/os161_1_99.dir/requires: CMakeFiles/os161_1_99.dir/kern/dev/generic/beep.c.o.requires
 CMakeFiles/os161_1_99.dir/requires: CMakeFiles/os161_1_99.dir/kern/dev/generic/console.c.o.requires
 CMakeFiles/os161_1_99.dir/requires: CMakeFiles/os161_1_99.dir/kern/dev/generic/random.c.o.requires

@@ -48,8 +48,8 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST0/vers.c" "/Users/yuyanghuang/cs350/os161-1.99/cmake-build-debug/CMakeFiles/os161_1_99.dir/kern/compile/ASST0/vers.c.o"
   "/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST1/autoconf.c" "/Users/yuyanghuang/cs350/os161-1.99/cmake-build-debug/CMakeFiles/os161_1_99.dir/kern/compile/ASST1/autoconf.c.o"
   "/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST1/vers.c" "/Users/yuyanghuang/cs350/os161-1.99/cmake-build-debug/CMakeFiles/os161_1_99.dir/kern/compile/ASST1/vers.c.o"
-  "/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST2/autoconf.c" "/Users/yuyanghuang/cs350/os161-1.99/cmake-build-debug/CMakeFiles/os161_1_99.dir/kern/compile/ASST2/autoconf.c.o"
-  "/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST2/vers.c" "/Users/yuyanghuang/cs350/os161-1.99/cmake-build-debug/CMakeFiles/os161_1_99.dir/kern/compile/ASST2/vers.c.o"
+  "/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST3/autoconf.c" "/Users/yuyanghuang/cs350/os161-1.99/cmake-build-debug/CMakeFiles/os161_1_99.dir/kern/compile/ASST3/autoconf.c.o"
+  "/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST3/vers.c" "/Users/yuyanghuang/cs350/os161-1.99/cmake-build-debug/CMakeFiles/os161_1_99.dir/kern/compile/ASST3/vers.c.o"
   "/Users/yuyanghuang/cs350/os161-1.99/kern/dev/generic/beep.c" "/Users/yuyanghuang/cs350/os161-1.99/cmake-build-debug/CMakeFiles/os161_1_99.dir/kern/dev/generic/beep.c.o"
   "/Users/yuyanghuang/cs350/os161-1.99/kern/dev/generic/console.c" "/Users/yuyanghuang/cs350/os161-1.99/cmake-build-debug/CMakeFiles/os161_1_99.dir/kern/dev/generic/console.c.o"
   "/Users/yuyanghuang/cs350/os161-1.99/kern/dev/generic/random.c" "/Users/yuyanghuang/cs350/os161-1.99/cmake-build-debug/CMakeFiles/os161_1_99.dir/kern/dev/generic/random.c.o"
@@ -289,8 +289,8 @@ set(CMAKE_TARGET_DEFINITIONS_C
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH
-  "../kern/compile/ASST2"
-  "../kern/compile/ASST2/includelinks"
+  "../kern/compile/ASST3"
+  "../kern/compile/ASST3/includelinks"
   "../kern/include"
   )
 

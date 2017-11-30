@@ -1311,59 +1311,59 @@ kern/compile/ASST1/vers.c.s:
 	$(MAKE) -f CMakeFiles/os161_1_99.dir/build.make CMakeFiles/os161_1_99.dir/kern/compile/ASST1/vers.c.s
 .PHONY : kern/compile/ASST1/vers.c.s
 
-kern/compile/ASST2/autoconf.o: kern/compile/ASST2/autoconf.c.o
+kern/compile/ASST3/autoconf.o: kern/compile/ASST3/autoconf.c.o
 
-.PHONY : kern/compile/ASST2/autoconf.o
-
-# target to build an object file
-kern/compile/ASST2/autoconf.c.o:
-	$(MAKE) -f CMakeFiles/os161_1_99.dir/build.make CMakeFiles/os161_1_99.dir/kern/compile/ASST2/autoconf.c.o
-.PHONY : kern/compile/ASST2/autoconf.c.o
-
-kern/compile/ASST2/autoconf.i: kern/compile/ASST2/autoconf.c.i
-
-.PHONY : kern/compile/ASST2/autoconf.i
-
-# target to preprocess a source file
-kern/compile/ASST2/autoconf.c.i:
-	$(MAKE) -f CMakeFiles/os161_1_99.dir/build.make CMakeFiles/os161_1_99.dir/kern/compile/ASST2/autoconf.c.i
-.PHONY : kern/compile/ASST2/autoconf.c.i
-
-kern/compile/ASST2/autoconf.s: kern/compile/ASST2/autoconf.c.s
-
-.PHONY : kern/compile/ASST2/autoconf.s
-
-# target to generate assembly for a file
-kern/compile/ASST2/autoconf.c.s:
-	$(MAKE) -f CMakeFiles/os161_1_99.dir/build.make CMakeFiles/os161_1_99.dir/kern/compile/ASST2/autoconf.c.s
-.PHONY : kern/compile/ASST2/autoconf.c.s
-
-kern/compile/ASST2/vers.o: kern/compile/ASST2/vers.c.o
-
-.PHONY : kern/compile/ASST2/vers.o
+.PHONY : kern/compile/ASST3/autoconf.o
 
 # target to build an object file
-kern/compile/ASST2/vers.c.o:
-	$(MAKE) -f CMakeFiles/os161_1_99.dir/build.make CMakeFiles/os161_1_99.dir/kern/compile/ASST2/vers.c.o
-.PHONY : kern/compile/ASST2/vers.c.o
+kern/compile/ASST3/autoconf.c.o:
+	$(MAKE) -f CMakeFiles/os161_1_99.dir/build.make CMakeFiles/os161_1_99.dir/kern/compile/ASST3/autoconf.c.o
+.PHONY : kern/compile/ASST3/autoconf.c.o
 
-kern/compile/ASST2/vers.i: kern/compile/ASST2/vers.c.i
+kern/compile/ASST3/autoconf.i: kern/compile/ASST3/autoconf.c.i
 
-.PHONY : kern/compile/ASST2/vers.i
+.PHONY : kern/compile/ASST3/autoconf.i
 
 # target to preprocess a source file
-kern/compile/ASST2/vers.c.i:
-	$(MAKE) -f CMakeFiles/os161_1_99.dir/build.make CMakeFiles/os161_1_99.dir/kern/compile/ASST2/vers.c.i
-.PHONY : kern/compile/ASST2/vers.c.i
+kern/compile/ASST3/autoconf.c.i:
+	$(MAKE) -f CMakeFiles/os161_1_99.dir/build.make CMakeFiles/os161_1_99.dir/kern/compile/ASST3/autoconf.c.i
+.PHONY : kern/compile/ASST3/autoconf.c.i
 
-kern/compile/ASST2/vers.s: kern/compile/ASST2/vers.c.s
+kern/compile/ASST3/autoconf.s: kern/compile/ASST3/autoconf.c.s
 
-.PHONY : kern/compile/ASST2/vers.s
+.PHONY : kern/compile/ASST3/autoconf.s
 
 # target to generate assembly for a file
-kern/compile/ASST2/vers.c.s:
-	$(MAKE) -f CMakeFiles/os161_1_99.dir/build.make CMakeFiles/os161_1_99.dir/kern/compile/ASST2/vers.c.s
-.PHONY : kern/compile/ASST2/vers.c.s
+kern/compile/ASST3/autoconf.c.s:
+	$(MAKE) -f CMakeFiles/os161_1_99.dir/build.make CMakeFiles/os161_1_99.dir/kern/compile/ASST3/autoconf.c.s
+.PHONY : kern/compile/ASST3/autoconf.c.s
+
+kern/compile/ASST3/vers.o: kern/compile/ASST3/vers.c.o
+
+.PHONY : kern/compile/ASST3/vers.o
+
+# target to build an object file
+kern/compile/ASST3/vers.c.o:
+	$(MAKE) -f CMakeFiles/os161_1_99.dir/build.make CMakeFiles/os161_1_99.dir/kern/compile/ASST3/vers.c.o
+.PHONY : kern/compile/ASST3/vers.c.o
+
+kern/compile/ASST3/vers.i: kern/compile/ASST3/vers.c.i
+
+.PHONY : kern/compile/ASST3/vers.i
+
+# target to preprocess a source file
+kern/compile/ASST3/vers.c.i:
+	$(MAKE) -f CMakeFiles/os161_1_99.dir/build.make CMakeFiles/os161_1_99.dir/kern/compile/ASST3/vers.c.i
+.PHONY : kern/compile/ASST3/vers.c.i
+
+kern/compile/ASST3/vers.s: kern/compile/ASST3/vers.c.s
+
+.PHONY : kern/compile/ASST3/vers.s
+
+# target to generate assembly for a file
+kern/compile/ASST3/vers.c.s:
+	$(MAKE) -f CMakeFiles/os161_1_99.dir/build.make CMakeFiles/os161_1_99.dir/kern/compile/ASST3/vers.c.s
+.PHONY : kern/compile/ASST3/vers.c.s
 
 kern/dev/generic/beep.o: kern/dev/generic/beep.c.o
 
@@ -7662,12 +7662,12 @@ help:
 	@echo "... kern/compile/ASST1/vers.o"
 	@echo "... kern/compile/ASST1/vers.i"
 	@echo "... kern/compile/ASST1/vers.s"
-	@echo "... kern/compile/ASST2/autoconf.o"
-	@echo "... kern/compile/ASST2/autoconf.i"
-	@echo "... kern/compile/ASST2/autoconf.s"
-	@echo "... kern/compile/ASST2/vers.o"
-	@echo "... kern/compile/ASST2/vers.i"
-	@echo "... kern/compile/ASST2/vers.s"
+	@echo "... kern/compile/ASST3/autoconf.o"
+	@echo "... kern/compile/ASST3/autoconf.i"
+	@echo "... kern/compile/ASST3/autoconf.s"
+	@echo "... kern/compile/ASST3/vers.o"
+	@echo "... kern/compile/ASST3/vers.i"
+	@echo "... kern/compile/ASST3/vers.s"
 	@echo "... kern/dev/generic/beep.o"
 	@echo "... kern/dev/generic/beep.i"
 	@echo "... kern/dev/generic/beep.s"
