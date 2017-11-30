@@ -102,23 +102,33 @@ runprogram(char *progname, char ** args, unsigned nargs)
 	/* Define the user stack in the address space */
 	result = as_define_stack(as, &stackptr);
 	if (result) {
+        curproc_setas(old);
+	as_activate();
+        as_destroy(as);
         /* p_addrspace will go away when curproc is destroyed */
         return result;
     }
 
     int argsize = 0;
-    size_t len;
-    unsigned i = nargs;
+    int i = nargs - 1;
     vaddr_t array[64];
+    array[nargs] = (vaddr_t)NULL;
 
-    while(i > 0) {
-        argsize = strlen(args[i-1]) + 1;
-        result = copyoutstr(args[i-1],stackptr-argsize,argsize,&len);
-        if(result) return result;
-        array[i] = stackptr-argsize;
+    while(i >= 0) {
+        argsize = strlen(args[i]) + 1;
+        result = copyoutstr(args[i],(userptr_t)stackptr-argsize,argsize,NULL);
+        if(result) { 
+          curproc_setas(old);
+          as_activate();
+          as_destroy(as);
+          return result;
+        }
+
+	array[i] = stackptr-argsize;
         stackptr -= argsize;
         --i;
     }
+    
 
     stackptr -= sizeof(userptr_t);
     stackptr = ROUNDUP(stackptr, sizeof(userptr_t));
@@ -126,7 +136,12 @@ runprogram(char *progname, char ** args, unsigned nargs)
     argsize = sizeof(userptr_t) * (nargs + 1);
     stackptr -= argsize;
     result = copyout(array, (userptr_t)stackptr, argsize);
-    if(result) return result;
+    if(result) {
+	curproc_setas(old);
+	as_activate();
+	as_destroy(as);
+	return result;
+    }
 
 
     kfree(old);

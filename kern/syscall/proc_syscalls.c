@@ -318,22 +318,24 @@ int sys_execv(const userptr_t program,userptr_t args) {
     result = copyinstr(program, buf, PATH_MAX , &len);
     if(result) return result;
     readin += len;
-    ptrs[counter] = buf;
-    counter++;
 
 
     while(true) {
-        result = copyinstr(args + sizeof(userptr_t) * counter, buf+readin, PATH_MAX - readin, &len);
+	userptr_t tem;
+	result = copyin(args + sizeof(userptr_t) * counter, &tem, sizeof(userptr_t));
+	if(result) return result;
+ 
+	if(tem == NULL) break;
+        result = copyinstr(tem , buf + readin, PATH_MAX - readin, &len);
         if(result) return result;
-        if(len == 0) break;
-        readin += len;
+        
         ptrs[counter] = buf+readin;
-        counter++;
+        readin += len;
+	counter++;
     }
 
     result = runprogram(buf, ptrs, counter);
     return result;
-
 
 }
 
