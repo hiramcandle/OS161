@@ -284,7 +284,6 @@ set(CMAKE_C_COMPILER_ID "AppleClang")
 # Preprocessor definitions for this target.
 set(CMAKE_TARGET_DEFINITIONS_C
   "OTP_A2=1"
-  "OTP_A3=1"
   "UW=1"
   )
 

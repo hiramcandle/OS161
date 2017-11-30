@@ -26,7 +26,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  */
-#include "opt-A3.h"
+
 #include <types.h>
 #include <kern/errno.h>
 #include <lib.h>
@@ -120,12 +120,8 @@ vm_fault(int faulttype, vaddr_t faultaddress)
 
 	switch (faulttype) {
 	    case VM_FAULT_READONLY:
-#if OPT_A3
-			return EFAULT;
-#else
 		/* We always create pages read-write, so we can't get this */
 		panic("dumbvm: got VM_FAULT_READONLY\n");
-#endif
 	    case VM_FAULT_READ:
 	    case VM_FAULT_WRITE:
 		break;
@@ -203,14 +199,6 @@ vm_fault(int faulttype, vaddr_t faultaddress)
 		splx(spl);
 		return 0;
 	}
-
-#if OPT_A3
-	ehi = faultaddress;
-	elo = paddr | TLBLO_DIRTY | TLBLO_VALID;
-	tlb_random(ehi,elo);
-	splx(spl);
-	return 0;
-#endif
 
 	kprintf("dumbvm: Ran out of TLB entries - cannot handle page fault\n");
 	splx(spl);

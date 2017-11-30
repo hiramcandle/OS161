@@ -4,7 +4,7 @@
 # compile C with /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc
 C_FLAGS = -g  
 
-C_DEFINES = -DOTP_A2=1 -DOTP_A3=1 -DUW=1
+C_DEFINES = -DOTP_A2=1 -DUW=1
 
 C_INCLUDES = -I/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST2 -I/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST2/includelinks -I/Users/yuyanghuang/cs350/os161-1.99/kern/include 
 

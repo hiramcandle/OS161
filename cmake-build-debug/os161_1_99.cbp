@@ -45,7 +45,6 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add option="-DUW=1"/>
-					<Add option="-DOTP_A3=1"/>
 					<Add option="-DOTP_A2=1"/>
 					<Add directory="/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST2"/>
 					<Add directory="/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST2/includelinks"/>
@@ -72,7 +71,6 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add option="-DUW=1"/>
-					<Add option="-DOTP_A3=1"/>
 					<Add option="-DOTP_A2=1"/>
 					<Add directory="/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST2"/>
 					<Add directory="/Users/yuyanghuang/cs350/os161-1.99/kern/compile/ASST2/includelinks"/>
