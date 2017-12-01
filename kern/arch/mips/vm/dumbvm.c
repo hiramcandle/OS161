@@ -51,9 +51,43 @@
  */
 static struct spinlock stealmem_lock = SPINLOCK_INITIALIZER;
 
+#if OPT_A3
+struct coreMap {
+	int size;
+	int valid;
+};
+
+struct coreMap *coremap;
+int pageNum;
+paddr_t start;
+int coremapSet = 0;
+
+#endif
+
+
 void
 vm_bootstrap(void)
 {
+
+#if OPT_A3
+	paddr_t lo, hi;
+	int coreSize;
+
+	ram_getsize(&lo , &hi);
+	pageNum = (hi-lo)/PAGE_SIZE;
+	coreSize = (sizeof(struct coreMap) * pageNum + PAGE_SIZE - 1)/PAGE_SIZE;
+	coremap = (struct coreMap*)PADDR_TO_KVADDR(lo);
+	start = lo + PAGE_SIZE * coreSize;
+	pageNum -= coreSize;
+
+	for(int i = 0; i < pageNum; ++i) {
+		coremap[i].size = 0;
+		coremap[i].valid = 1;
+	}
+
+	coremapSet = 1;
+#endif
+
 	/* Do nothing. */
 }
 
@@ -63,11 +97,44 @@ getppages(unsigned long npages)
 {
 	paddr_t addr;
 
+#if OPT_A3
+
+	int index = -1;
+	int count = 0;
+
+    if(coremapSet) {
+		for (int i = 0; i < (int) pageNum; ++i) {
+			if ((unsigned long) coremap[i].valid == 1) count++;
+			if ((int) npages == count) {
+				index = i - count + 1;
+				break;
+			}
+		}
+
+		if(index == -1) return 0;
+
+		coremap[index].size = (int)npages;
+		for (int j = 0; j < (int) npages; ++j) {
+			coremap[index + j].valid = 0;
+		}
+
+		addr = index*PAGE_SIZE + start;
+
+	} else {
+		spinlock_acquire(&stealmem_lock);
+
+		addr = ram_stealmem(npages);
+
+		spinlock_release(&stealmem_lock);
+	}
+#else
+
 	spinlock_acquire(&stealmem_lock);
 
 	addr = ram_stealmem(npages);
 	
 	spinlock_release(&stealmem_lock);
+#endif
 	return addr;
 }
 
@@ -86,9 +153,26 @@ alloc_kpages(int npages)
 void 
 free_kpages(vaddr_t addr)
 {
+#if OPT_A3
+
+	paddr_t paddr = addr - MIPS_KSEG0;
+	int index = (paddr - start)/PAGE_SIZE;
+
+	coremap[index].size = 0;
+
+	for(int i = 0; i < coremap[index].size; ++i) {
+		coremap[index+i].valid = 1;
+	}
+
+	return;
+
+#else
+
+
 	/* nothing - leak the memory. */
 
 	(void)addr;
+#endif
 }
 
 void
