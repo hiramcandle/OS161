@@ -75,7 +75,7 @@ vm_bootstrap(void)
 
 	ram_getsize(&lo , &hi);
 	pageNum = (hi-lo)/PAGE_SIZE;
-	coreSize = ROUNDUP(sizeof(struct coreMap) * pageNum, PAGE_SIZE - 1)/PAGE_SIZE;
+	coreSize = ROUNDUP(sizeof(struct coreMap) * pageNum, PAGE_SIZE)/PAGE_SIZE;
 	coremap = (struct coreMap*)PADDR_TO_KVADDR(lo);
 	start = lo + PAGE_SIZE * coreSize;
 	pageNum -= coreSize;
@@ -98,7 +98,7 @@ getppages(unsigned long npages)
 	paddr_t addr;
 
 #if OPT_A3
-
+	spinlock_acquire(&stealmem_lock);
 	int index = -1;
 	int count = 0;
 
@@ -113,20 +113,22 @@ getppages(unsigned long npages)
 
 		if(index == -1) return 0;
 
-		coremap[index].size = (int)npages;
+
 		for (int j = 0; j < (int) npages; ++j) {
 			coremap[index + j].valid = 0;
+			coremap[index + j].size = (int)npages;
 		}
 
 		addr = index*PAGE_SIZE + start;
 
 	} else {
-		spinlock_acquire(&stealmem_lock);
+
 
 		addr = ram_stealmem(npages);
 
-		spinlock_release(&stealmem_lock);
+
 	}
+	spinlock_release(&stealmem_lock);
 #else
 
 	spinlock_acquire(&stealmem_lock);
@@ -158,12 +160,11 @@ free_kpages(vaddr_t addr)
 	paddr_t paddr = addr - MIPS_KSEG0;
 	int index = (paddr - start)/PAGE_SIZE;
 
-
-
 	for(int i = 0; i < coremap[index].size; ++i) {
 		coremap[index+i].valid = 1;
+		coremap[index+i].size = 0;
 	}
-	coremap[index].size = 0;
+
 	return;
 
 #else
@@ -474,6 +475,10 @@ as_copy(struct addrspace *old, struct addrspace **ret)
 	new->as_npages1 = old->as_npages1;
 	new->as_vbase2 = old->as_vbase2;
 	new->as_npages2 = old->as_npages2;
+
+#if OPT_A3
+	new->iscomplete = old->iscomplete;
+#endif
 
 	/* (Mis)use as_prepare_load to allocate some physical memory. */
 	if (as_prepare_load(new)) {
