@@ -75,7 +75,7 @@ vm_bootstrap(void)
 
 	ram_getsize(&lo , &hi);
 	pageNum = (hi-lo)/PAGE_SIZE;
-	coreSize = (sizeof(struct coreMap) * pageNum + PAGE_SIZE - 1)/PAGE_SIZE;
+	coreSize = ROUNDUP(sizeof(struct coreMap) * pageNum, PAGE_SIZE - 1)/PAGE_SIZE;
 	coremap = (struct coreMap*)PADDR_TO_KVADDR(lo);
 	start = lo + PAGE_SIZE * coreSize;
 	pageNum -= coreSize;
@@ -103,8 +103,8 @@ getppages(unsigned long npages)
 	int count = 0;
 
     if(coremapSet) {
-		for (int i = 0; i < (int) pageNum; ++i) {
-			if ((unsigned long) coremap[i].valid == 1) count++;
+		for (int i = 0; i < (int)pageNum; ++i) {
+			if (coremap[i].valid == 1) count++;
 			if ((int) npages == count) {
 				index = i - count + 1;
 				break;
@@ -158,12 +158,12 @@ free_kpages(vaddr_t addr)
 	paddr_t paddr = addr - MIPS_KSEG0;
 	int index = (paddr - start)/PAGE_SIZE;
 
-	coremap[index].size = 0;
+
 
 	for(int i = 0; i < coremap[index].size; ++i) {
 		coremap[index+i].valid = 1;
 	}
-
+	coremap[index].size = 0;
 	return;
 
 #else
