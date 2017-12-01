@@ -58,7 +58,7 @@ struct coreMap {
 };
 
 struct coreMap *coremap;
-int pageNum;
+int pageNum = 0;
 paddr_t start;
 int coremapSet = 0;
 
@@ -75,9 +75,11 @@ vm_bootstrap(void)
 
 	ram_getsize(&lo , &hi);
 	pageNum = (hi-lo)/PAGE_SIZE;
-	coreSize = ROUNDUP(sizeof(struct coreMap) * pageNum, PAGE_SIZE)/PAGE_SIZE;
+	coreSize = ROUNDUP(sizeof(struct coreMap) * pageNum , PAGE_SIZE)/PAGE_SIZE;
 	coremap = (struct coreMap*)PADDR_TO_KVADDR(lo);
+	KASSERT((vaddr_t)coremap%PAGE_SIZE==0);
 	start = lo + PAGE_SIZE * coreSize;
+
 	pageNum -= coreSize;
 
 	for(int i = 0; i < pageNum; ++i) {
@@ -103,7 +105,7 @@ getppages(unsigned long npages)
 	int count = 0;
 
     if(coremapSet) {
-		for (int i = 0; i < (int)pageNum; ++i) {
+		for (int i = 0; i < (int) pageNum; ++i) {
 			if (coremap[i].valid == 1) count++;
 			if ((int) npages == count) {
 				index = i - count + 1;
@@ -112,7 +114,6 @@ getppages(unsigned long npages)
 		}
 
 		if(index == -1) return 0;
-
 
 		for (int j = 0; j < (int) npages; ++j) {
 			coremap[index + j].valid = 0;
@@ -123,12 +124,10 @@ getppages(unsigned long npages)
 
 	} else {
 
-
 		addr = ram_stealmem(npages);
 
-
 	}
-	spinlock_release(&stealmem_lock);
+	 spinlock_release(&stealmem_lock);
 #else
 
 	spinlock_acquire(&stealmem_lock);
@@ -156,15 +155,20 @@ void
 free_kpages(vaddr_t addr)
 {
 #if OPT_A3
-
+	spinlock_acquire(&stealmem_lock);
 	paddr_t paddr = addr - MIPS_KSEG0;
 	int index = (paddr - start)/PAGE_SIZE;
+	
+	if(coremap[index].size == 0) panic("wtf");
 
-	for(int i = 0; i < coremap[index].size; ++i) {
-		coremap[index+i].valid = 1;
+//coremap[index].size = 0;
+	int tem = coremap[index].size;
+	for(int i = 0; i < tem; ++i) {
 		coremap[index+i].size = 0;
+		coremap[index+i].valid = 1;
 	}
 
+	spinlock_release(&stealmem_lock);
 	return;
 
 #else
@@ -332,6 +336,13 @@ as_create(void)
 void
 as_destroy(struct addrspace *as)
 {
+#if OPT_A3
+    if(as != NULL) {
+		free_kpages(PADDR_TO_KVADDR(as->as_stackpbase));
+		free_kpages(PADDR_TO_KVADDR(as->as_pbase1));
+		free_kpages(PADDR_TO_KVADDR(as->as_pbase2));
+	}
+#endif
 	kfree(as);
 }
 
@@ -475,11 +486,9 @@ as_copy(struct addrspace *old, struct addrspace **ret)
 	new->as_npages1 = old->as_npages1;
 	new->as_vbase2 = old->as_vbase2;
 	new->as_npages2 = old->as_npages2;
-
 #if OPT_A3
 	new->iscomplete = old->iscomplete;
 #endif
-
 	/* (Mis)use as_prepare_load to allocate some physical memory. */
 	if (as_prepare_load(new)) {
 		as_destroy(new);

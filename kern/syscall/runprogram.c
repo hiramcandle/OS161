@@ -57,7 +57,7 @@ int
 runprogram(char *progname, char ** args, unsigned nargs)
 {
 
-    struct addrspace *old;
+    struct addrspace *old = NULL;
     struct addrspace *as;
 	struct vnode *v;
 	vaddr_t entrypoint, stackptr;
@@ -144,7 +144,7 @@ runprogram(char *progname, char ** args, unsigned nargs)
     }
 
 
-    kfree(old);
+    as_destroy(old);
 	/* Warp to user mode. */
 	enter_new_process(nargs,(userptr_t)stackptr /*userspace addr of argv*/,
 			  stackptr, entrypoint);
