@@ -104,7 +104,6 @@ proc_create(const char *name)
 #if OPT_A2
 	procinfoarray_init(&proc->p_children);
 	proc->p_parent = NULL;
-	proc->p_id = PID_MIN - 1;
 #endif
 
 	spinlock_init(&proc->p_lock);
@@ -446,7 +445,7 @@ curproc_setas(struct addrspace *newas)
 
 
 #if OPT_A2
-
+/*
 int proc_nospace(void) {
 	bool result = false;
 	P(proc_count_mutex);
@@ -456,22 +455,6 @@ int proc_nospace(void) {
 	}
 	V(proc_count_mutex);
 	return result;
-}
-
-int curproc_childcheck(pid_t pid) {
-  int result = 0;
-
-  struct proc *proc = curproc;
-  spinlock_acquire(&proc->p_lock);
-  unsigned num = procinfoarray_num(&proc->p_children);
-  for (unsigned i = 0; i < num; i++) {
-    if (procinfoarray_get(&proc->p_children, i)->pid == pid) {
-      result = 1;
-      break;
-    }
-  }
-  spinlock_release(&proc->p_lock);
-  return result;
 }
 
 
@@ -484,58 +467,6 @@ struct addrspace *proc_setas(struct proc *p, struct addrspace *as) {
         return tem;
  }
 
-int proc_exist(pid_t pid) {
-  int r = 1;
-  P(proc_count_mutex);
-  if (proc_ids[pid] == 'c') r = 0;
-
-  V(proc_count_mutex);
-
-  return r;
-}
-
-
-int curproc_childexitcode(pid_t pid) {
-        int r;
-        struct proc *proc = curproc;
-        struct procinfo *cpinfo;
-
-        spinlock_acquire(&proc->p_lock);
-        unsigned num = procinfoarray_num(&proc->p_children);
-        for (unsigned i = 0; i < num; i++) {
-                cpinfo = procinfoarray_get(&proc->p_children, i);
-                if (cpinfo->pid == pid) {
-                        break;
-                }
-        }
-        spinlock_release(&proc->p_lock);
-
-        P(cpinfo->waitsem);
-        r = cpinfo->exitcode;
-        return r;
-}
-
-
-void curproc_removechild(pid_t pid) {
-        struct proc *proc = curproc;
-
-        spinlock_acquire(&proc->p_lock);
-        unsigned num = procinfoarray_num(&proc->p_children);
-
-        for (unsigned i = 0; i < num; i++) {
-                if (procinfoarray_get(&proc->p_children, i)->pid == pid) {
-                        procinfoarray_remove(&proc->p_children, i);
-                        break;
-                }
-        }
-        spinlock_release(&proc->p_lock);
-        P(proc_count_mutex);
-        if (proc_ids[pid] == 'z') {
-                proc_ids[pid] = 'c';
-                if (proc_min_id > pid) proc_min_id = pid;
-        }
-        V(proc_count_mutex);
-}
 
 
 void curproc_updateexitcode(int code) {
@@ -558,6 +489,12 @@ void curproc_updateexitcode(int code) {
         V(proc_count_mutex);
 }
 
+void curproc_changeparent(struct proc *child) {
+        spinlock_acquire(&child->p_lock);
+        child->p_parent = curproc;
+        spinlock_release(&child->p_lock);
+}
+*/
 int curproc_add(pid_t pid) {
         int result = 0;
         struct procinfo *child = kmalloc(sizeof(struct procinfo));
@@ -577,11 +514,7 @@ int curproc_add(pid_t pid) {
         return result;
 }
 
-void curproc_changeparent(struct proc *child) {
-        spinlock_acquire(&child->p_lock);
-        child->p_parent = curproc;
-        spinlock_release(&child->p_lock);
-}
+
 
 #endif
 
